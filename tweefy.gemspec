@@ -33,4 +33,8 @@ Gem::Specification.new do |spec|
   
   spec.add_development_dependency "guard"
   spec.add_development_dependency "guard-rspec"
+
+  spec.add_development_dependency "coveralls"
+
+  spec.required_ruby_version = '>= 2.0.0'
 end
