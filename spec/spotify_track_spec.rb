@@ -19,6 +19,7 @@ describe Tweefy::SpotifyTrack do
 
   describe "tweet message" do
     it "message to publish on twitter" do
+      puts @track.message
       short_message = @track.message.split("♫").first
       expect(short_message).to eq("#NowPlaying \"What A Wonderful World\" " \
                                   "by Louis Armstrong ")

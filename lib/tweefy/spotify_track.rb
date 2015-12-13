@@ -1,7 +1,10 @@
 require 'rspotify'
+require "tweefy/short_url"
 
 module Tweefy
   class SpotifyTrack
+
+    include Tweefy::ShortUrl
 
     attr_accessor :track
 
@@ -10,7 +13,9 @@ module Tweefy
     end
 
     def message
-      "#NowPlaying \"#{@track.name}\" by #{@track.artists.first.name} ♫"
+      "#NowPlaying \"#{@track.name}\" " \
+      "by #{@track.artists.first.name} ♫ " \
+      "#{shorten(@track.id)} "
     end
 
   end
